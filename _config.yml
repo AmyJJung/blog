@@ -6,7 +6,7 @@
 name: DevBlog
 
 # Short bio or description (displayed in the header)
-description: 개발은 재밌어
+description: 개발 기록 일지
 
 #
 # Flags below are optional
@@ -39,7 +39,7 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: dadaJJung
+  github: AmyJJung
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
   linkedin:
@@ -55,14 +55,14 @@ footer-text: © 2017 Kiko Now
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: dadaJJung # <username>.disqus.com
+disqus: AmyJJung # <username>.disqus.com
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: "https://dadaJJung.github.io"
+url: "https://AmyJJung.github.io"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
