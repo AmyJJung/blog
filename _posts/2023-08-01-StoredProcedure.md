@@ -2,7 +2,7 @@
 layout: post
 title: 회사에서 프로시저를 사용하면서 느낀점
 tags:
-  - 회사
+  - 회사생활
 ---
 
 <br>
