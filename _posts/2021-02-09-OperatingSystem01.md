@@ -11,7 +11,7 @@ tags:
 
 <br>
 
-<img src="https://github.com/zoe0-0/blog/blob/master/images/computer_structure.png?raw=true" alt="스크린샷 2021-02-09 오전 11.13.55" style="zoom:60%;"/>
+<img src="https://github.com/AmyJJung/blog/blob/main/images/computer_structure.png?raw=true" alt="스크린샷 2021-02-09 오전 11.13.55" style="zoom:60%;"/>
 
 <br>
 
