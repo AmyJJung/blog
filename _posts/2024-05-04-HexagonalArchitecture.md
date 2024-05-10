@@ -7,6 +7,8 @@ tags:
 
 <br>
 
+<img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/clean-archi-book.jpeg?raw=true" alt="book_image" style="zoom:30%; float:left" />
+
 만들면서 배우는 클린 아키텍처 책을 읽고 개인 프로젝트에 적용해 본 내용을 정리해보려고 한다. 분량이 길지 않고 책이 가벼워서 들고다니면서 읽기 편했다. 
 
 이 책에서는 기존 계층형 아키텍처의 문제점에 대해서 이야기한 후, 이런 문제점들을 해결하고 유지보수를 용이하도록 해주는 <b>헥사고날 아키텍처</b>에 대해 소개하고 있다. 그리고 웹 계층, 애플리케이션 계층, 영속성 계층의 구현방법과 각 계층의 경계에서 모델을 매핑하는 여러 방법에 대해서도 간단하게 설명하고 있다.
