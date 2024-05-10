@@ -7,7 +7,7 @@ tags:
 
 <br>
 
-<img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/clean-archi-book.jpeg?raw=true" alt="book_image" style="zoom:30%; float:left" />
+<img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/clean-archi-book.jpeg?raw=true" alt="book_image" style="zoom:40%;" />
 
 만들면서 배우는 클린 아키텍처 책을 읽고 개인 프로젝트에 적용해 본 내용을 정리해보려고 한다. 분량이 길지 않고 책이 가벼워서 들고다니면서 읽기 편했다. 
 
@@ -45,7 +45,7 @@ tags:
 
 그 다음으로는 위에서 정리한 단일 책임 원칙, 의존성 역전 원칙 컨셉이 녹아있는 헥사고날 아키텍처에 대해 설명한다.
 
-<img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/hexagonal.jpeg?raw=true" alt="hexagonal_architecture" style="zoom:40%; float:left" />
+<img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/hexagonal.jpeg?raw=true" alt="hexagonal_architecture" style="zoom:40%; float:left; clear:both;" />
 
 위 그림에서 볼 수 있듯이 애플리케이션 코어가 육각형으로 표현되어 있어서 <b>헥사고날 아키텍처 (hexagonal architecture)</b>라고 불린다고 한다. 육각형에서 모든 의존성으로 내부로 향한다. 육각형 내부에 있는 애플리케이션 코어와 육각형 외부에 있는 어댑터들이 통신하려면 애플리케이션 코어가 포트를 제공해야 한다. 그래서 <b>포트와 어댑터 아킥텍처 (ports-and-adapters)</b> 라고도 불린다. 
 
@@ -55,7 +55,7 @@ tags:
 
 헥사고날 아키텍처의 컨셉을 지키기 위해 꼭 필요한 개념으로 <b>의존성 주입</b>이 있다. 
 
-<img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/hexagonal-example.jpeg?raw=true" alt="dependency_injection" style="zoom:40%; float:left" />
+<img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/hexagonal-example.jpeg?raw=true" alt="dependency_injection" style="zoom:40%; float:left; clear:both;" />
 
 위 이미지에서 볼 수 있듯이 도메인 계층에는 `SendMoneyService` 에서는 영속성 어댑터를 사용하기 위해 도메인 계층에 있는 `LoadAccountPort` 인터페이스를 사용한다. 그리고 영속성 계층의 `AccountPersistenceAdapter` 는 `LoadAccountPort`를 구현한다. 
 
@@ -89,20 +89,20 @@ private LoadAccounPort loadAccountPort = new AccountPersistenceAdpater();
 
 1. 매핑하지 않기 전략
 
-   <img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/no-mapping.jpeg?raw=true" alt="no-mapping" style="zoom:30%; float:left" />
+   <img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/no-mapping.jpeg?raw=true" alt="no-mapping" style="zoom:30%; float:left; clear:both" />
 
    1. 모든 계층에서 도메인 모델을 공유하는 방식이다. 이럴 경우 웹 계층, 애플리케이션 계층, 영속성 계층과 관련된 이유로 도메인 모델이 변경될 수 있기 때문에 단일 책임 원칙을 위반한다.
 
 2. 양방향 매핑 전략
 
-   <img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/twoway-mapping.jpeg?raw=true" alt="twoway-mapping" style="zoom:30%; float:left" />
+   <img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/twoway-mapping.jpeg?raw=true" alt="twoway-mapping" style="zoom:30%; float:left; clear:both;" />
 
    1. 각 계층에서 전용 모델을 가지고 있다. 각 계층에서 전용 모델을 번경하더라도 다른 계층에 영향이 없다. 
    2. 하지만, 도메인 모델이 계층 경계를 넘어서 통신하는 데 사용되는 단점이 있다. 즉 웹 계층에서 유스케이스 인터페이스를 호출할 때 도메인 모델로 변환해서 호출해야하고, 유스케이스에서 반환해주는 도메인 모델을 웹 계층 모델로 다시 변환해야한다(양방향 매핑). 영속성 계층도 동일하다. 따라서 도메인 모델이 바깥층 계층의 요구에 따른 변경에 취약해지게 된다. 
 
 3. 완전 매핑 전략
 
-   <img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/full-mapping.jpeg?raw=true" alt="full-mapping" style="zoom:30%; float:left" />
+   <img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/full-mapping.jpeg?raw=true" alt="full-mapping" style="zoom:30%; float:left; clear:both;" />
 
    - 양방향 매핑 전략과 다르게 계층 경계를 넘어 통신할 때도 도메인 모델이 아닌 전용 모델을 사용한다. 단점은 너무 번거롭다. 하지만, 이렇게 개발할 경우 계층을 넘어 통신할 때 전용 모델에 유효성 검증 로직을 추가할 수 있고, 도메인 로직을 더럽히지 않을 수 있다. 
 
@@ -117,7 +117,7 @@ private LoadAccounPort loadAccountPort = new AccountPersistenceAdpater();
 
 사용자가 로그인을 하면 세션을 생성해서 로그인 정보를 저장한 후, 세션아이디가 기록된 쿠키를 발급해 준다. 그 후에 로그인 할 때는 쿠키에 담긴 세션아이디로 사용자 정보를 찾아서 자동로그인 시켜주는 간단한 기능을 구현해보았다. 
 
-<img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/tree.png?raw=true" alt="weblogin-project" style="zoom:50%; float:left" />
+<img src="https://github.com/AmyJJung/blog/blob/main/images/hexagonal_architecture/tree.png?raw=true" alt="weblogin-project" style="zoom:50%; float:left; clear:both;" />
 
 영속성 계층인 `adapter/persistence` 패키지에 있는 Repository 구현 클래스들은 <b>package-private</b>접근 수준으로 작성했다. 그 이유는, 레포지토리 구현체들은 `application` 패키지 내에 있는 포트 인터페이스를 통하지 않고는 바깥에서 호출되지 않기 때문이다.
 
