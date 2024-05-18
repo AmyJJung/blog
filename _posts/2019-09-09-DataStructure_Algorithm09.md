@@ -44,4 +44,4 @@ tags:
 
 <br>
 
-![tree](https://raw.githubusercontent.com/zoe0-0/blog/master/images/DataStructure/tree.png)
+![tree](https://github.com/AmyJJung/blog/blob/main/images/DataStructure/tree.png?raw=true)

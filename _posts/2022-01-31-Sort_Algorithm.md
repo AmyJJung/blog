@@ -15,57 +15,64 @@ tags:
 
 - QuickSort의 구현 코드 
 
-- ```java
-    public static void quickSort(int[] arr, int left, int right) {
+    ```java
+    public void quickSort(int[] arr, int left, int right) {
+      
         int part2 = partition(arr,left,right);
+      
         if(left+1<part2) {
           quickSort(arr,left,part2-1);
         }
         if(part2<right) {
           quickSort(arr,part2,right);
         }
-  
+      
     }
-  
-    public static int partition(int[] arr, int left, int right) {
+      
+    public int partition(int[] arr, int left, int right) {
+      
         int pivot = arr[(left+right)/2]; 
+      
         while(left<=right) {
-          while(arr[left]<pivot) left++;
-          while(arr[right]>pivot) right--;
-          if(left<=right) {
-            swap(arr,left,right);
-            left++; right--;
-          }
+            while(arr[left]<pivot) left++;
+            while(arr[right]>pivot) right--;
+            if(left<=right) {
+              swap(arr,left,right);
+              left++; right--;
+            }
         }
+      
         return left;
     }
-  
-    public static void swap(int[] arr, int a, int b) {
-      int temp = arr[a];
-      arr[a] = arr[b];
-      arr[b] = temp;
+      
+    public void swap(int[] arr, int a, int b) {
+      
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+      
     }
-  ```
+    ```
 
-- partitioning 에 걸리는 시간 => Θ(n) 
+- partitioning 에 걸리는 시간 
 
 - - n길이의 배열이 들어왔을때 pivot을 기준으로 나머지 n-1개의 숫자를 비교
   
   - 즉, 파티셔닝을 한번 수행할 때 마다 최대 n번 숫자비교 
 
-- partitioning이 수행되는 횟수  => lonN / N
+- partitioning이 수행되는 횟수  
   
   - 경우에 따라 횟수가 달라진다 (**Balanced Partitioning** vs **unbalanced Partitioning**)
   
   - **Balanced Partitioning**
-    
     - 각 하위 문제가 기존 문제의 절반 크기로 나누어지는 경우  => logN
-  
-  - **Unbalanced Partitioning**
     
+  - **Unbalanced Partitioning**
     - 매번 pivot 기준으로 정렬할 때 마다 1과 n-1개로 나누어지는 경우 => N
   
-  ![](https://raw.githubusercontent.com/dadaJJung/blog/0ef5dafb8f4c8bdea4504bbdb734e16b12603435/images/DataStructure/SortTimeComplexity.png)
+  ![SortTimeComplexity.png](https://github.com/AmyJJung/blog/blob/main/images/DataStructure/SortTimeComplexity.png?raw=true)
+
+- 따라서 최악의 경우 시간복잡도는 O(N*N),  평균적으로는 O(logN)  
 
 <br>
 
