@@ -20,13 +20,13 @@ tags:
    }
   ```
 
-- ![](https://github.com/dadaJJung/blog/blob/main/images/Fibo_img.png?raw=true)
+- ![피보나치](https://github.com/AmyJJung/blog/blob/main/images/Fibo_img.png?raw=true)
 
 - 맨 위 노드부터 쭉 타고 내려가면  `Fibo(n) -> Fibo(n-1) -> Fibo(n-2) ..... -> Fibo(1)` 이기 때문에, 높이가 n인 Binary Tree의 모습을 확인할 수 있다.
 
 - 높이가 n인 Perfect Binary Tree의 노드 수는 2^n - 1이다
 
-- 따라서, Fibo(n)의 시간복잡도는 **O( 2^n -1 )   = **O( 2^n )**** 이다
+- 따라서, Fibo(n)의 시간복잡도는 **O( 2^n -1 ) = O( 2^n )** 이다
 
 <br>
 
